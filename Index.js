@@ -4,7 +4,7 @@ const colors = require('colors');
 // used for writting to file functions
 const fs = require('fs');
 // Used to load shapes.js for making the svg shapes
-const shapes = require("./lib/shapes");
+const {shapes} = require("./lib/shapes");
 const colorList = require("./data/colorList");
 
 const fileName = "./examples/logo.svg"
@@ -56,13 +56,13 @@ const questions = [
     },
     {
         type: 'input',
-        message: colors.brightGreen('Please type a color for your title or a valid hexidecimal code, that must start with a # and 3 - 6 chacters between 0-9 and a-f'),
+        message: colors.brightGreen('Please type a color for your inner shape color or a valid hexidecimal code, that must start with a # and 3 - 6 chacters between 0-9 and a-f'),
         name: "shapeColor",
         validate: validation
     },
     {
         type: 'input',
-        message: colors.brightGreen('Please type a color for your title or a valid hexidecimal code, that must start with a # and 3 - 6 chacters between 0-9 and a-f'),
+        message: colors.brightGreen('Please type a color for your background or a valid hexidecimal code, that must start with a # and 3 - 6 chacters between 0-9 and a-f'),
         name: "backgroundColor",
         validate: validation
     },
